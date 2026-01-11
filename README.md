@@ -1,4 +1,4 @@
-# 📄 Document Scanner Web Application
+# 📄 Document Scanner Using Homography
 
 > AI-powered document scanner that automatically detects, crops, and enhances documents using computer vision and perspective transformation.
 
