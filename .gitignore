@@ -1,0 +1,24 @@
+# Virtual environment
+venv/
+ENV/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Uploaded/Generated images
+static/uploads/*
+static/outputs/*
+
+# But include empty folders
+!static/uploads/.gitkeep
+!static/outputs/.gitkeep
+
+# OS files
+.DS_Store
+
+# VS Code settings
+.vscode/
