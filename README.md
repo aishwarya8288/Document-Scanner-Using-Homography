@@ -5,7 +5,7 @@
 ![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)
 ![Flask](https://img.shields.io/badge/Flask-3.0.0-green.svg)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.9.0-red.svg)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 
 ## ✨ Features
 
@@ -199,141 +199,6 @@ elif mode == 'your_mode':
     </div>
 </label>
 ```
-
-## 🚀 Production Deployment
-
-### Using Gunicorn (Recommended)
-
-```bash
-# Install gunicorn
-pip install gunicorn
-
-# Run with 4 worker processes
-gunicorn -w 4 -b 0.0.0.0:5000 --timeout 120 app:app
-```
-
-### Environment Variables
-
-Set these environment variables for production:
-
-```bash
-export FLASK_DEBUG=False
-export SECRET_KEY=your-secret-key-here
-export FILE_MAX_AGE=3600
-```
-
-### Nginx Configuration (Optional)
-
-```nginx
-server {
-    listen 80;
-    server_name yourdomain.com;
-
-    location / {
-        proxy_pass http://localhost:5000;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        client_max_body_size 16M;
-    }
-
-    location /static {
-        alias /path/to/document_scanner_web/static;
-        expires 30d;
-    }
-}
-```
-
-### Docker Deployment (Optional)
-
-Create a `Dockerfile`:
-
-```dockerfile
-FROM python:3.11-slim
-
-WORKDIR /app
-
-# Install dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Copy application
-COPY . .
-
-# Expose port
-EXPOSE 5000
-
-# Run application
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "--timeout", "120", "app:app"]
-```
-
-Build and run:
-
-```bash
-docker build -t document-scanner .
-docker run -p 5000:5000 document-scanner
-```
-
-## 📊 API Documentation
-
-### POST /scan
-
-Scan a document image.
-
-**Request:**
-
-- Method: `POST`
-- Content-Type: `multipart/form-data`
-- Body:
-  - `file`: Image file (required)
-  - `enhance_mode`: Enhancement mode (optional, default: 'adaptive')
-
-**Response (Success):**
-
-```json
-{
-    "success": true,
-    "message": "Document scanned successfully! ✨",
-    "original_url": "/static/uploads/20260110_123456_abc123.jpg",
-    "scanned_url": "/static/outputs/scanned_20260110_123456_abc123.jpg",
-    "processing_time": 2.34,
-    "dimensions": {
-        "original": [1920, 1080],
-        "scanned": [1654, 2339]
-    },
-    "enhance_mode": "adaptive",
-    "timestamp": "2026-01-10 12:34:56"
-}
-```
-
-**Response (Error):**
-
-```json
-{
-    "success": false,
-    "message": "Could not detect document boundary...",
-    "error_type": "detection_failed",
-    "tips": [
-        "Ensure the document has clear edges",
-        "Try better lighting conditions"
-    ]
-}
-```
-
-### GET /health
-
-Health check endpoint.
-
-**Response:**
-
-```json
-{
-    "status": "healthy",
-    "service": "Document Scanner API",
-    "version": "1.0.0",
-    "timestamp": "2026-01-10T12:34:56"
-}
-```
-
 ## 🧪 Testing
 
 Run tests (if pytest is installed):
@@ -354,35 +219,6 @@ Manual testing checklist:
 - ✅ Test on mobile device
 - ✅ Test keyboard shortcuts
 
-## 🐛 Troubleshooting
-
-### Document not detected?
-
-- Ensure the document has clear, visible edges
-- Use good lighting (avoid shadows and glare)
-- Make sure the document is the largest object in the image
-- Try a contrasting background (e.g., white paper on dark table)
-
-### Processing takes too long?
-
-- Reduce `PROCESSING_WIDTH` in `config.py` (default: 800)
-- Upload smaller images
-- Ensure server has sufficient resources
-
-### Module not found errors?
-
-```bash
-# Reinstall dependencies
-pip install --upgrade -r requirements.txt
-```
-
-### Port already in use?
-
-```bash
-# Change port in app.py or run on different port
-python app.py
-# Then edit the port number in app.py
-```
 
 ## 📝 Technical Details
 
@@ -419,26 +255,6 @@ Contributions are welcome! Here are some ideas:
 ## 📄 License
 
 This project is licensed under the MIT License.
-
-## 👨‍💻 Author
-
-Built with ❤️ by Senior Full Stack & Computer Vision Engineers
-
-## 🙏 Acknowledgments
-
-- OpenCV community for excellent documentation
-- Flask framework for simplicity and elegance
-- All contributors and testers
-
-## 📞 Support
-
-For issues, questions, or suggestions:
-
-- Create an issue on GitHub
-- Check the troubleshooting section
-- Review the API documentation
-
----
 
 **Happy Scanning! 📄✨**
 
