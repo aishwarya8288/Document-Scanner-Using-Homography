@@ -255,7 +255,7 @@ Contributions are welcome! Here are some ideas:
 ## 🖼️ Screenshots
 
 ### 🏠 Home Page
-![Home](document_scanner_web\assets\screenshots\Home.png)
+![Home](assets/screenshots/Home.png)
 
 ---
 
@@ -265,45 +265,43 @@ Contributions are welcome! Here are some ideas:
 ---
 
 ### 📤 Upload Page
-![Upload](document_scanner_web\assets\screenshots\Upload.png)
+![Upload](assets/screenshots/Upload.png)
 
 ---
 
 ### 🏆 Feature 1
-![Feature 1](document_scanner_web\assets\screenshots\Feature 1.png)
+![Feature 1](assets/screenshots/Feature%201.png)
 
 ---
 
 ### 🚀 Feature 2
-![Feature 2](document_scanner_web\assets\screenshots\Feature 2 .png)
+![Feature 2](assets/screenshots/Feature%202%20.png)
 
 ---
 
 ## 📄 Scan Page
-![Scan](document_scanner_web\assets\screenshots\Scan.png)
+![Scan](assets/screenshots/Scan.png)
 
 ---
 
 ## 📦 Output Results
 
 ### Output 1
-![Output 1](document_scanner_web\assets\screenshots\Output 1.png)
+![Output 1](assets/screenshots/Output%201.png)
 
 ### Output 2
-![Output 2](document_scanner_web\assets\screenshots\Output 2 .png)
+![Output 2](assets/screenshots/Output%202.png)
 
 ### Output 3
-![Output 3](document_scanner_web\assets\screenshots\Output 3.png)
+![Output 3](assets/screenshots/Output%203.png)
 
 ### Output 4
-![Output 4](document_scanner_web\assets\screenshots\Output 4.png)
+![Output 4](assets/screenshots/Output%204.png)
 
 ### Output 5
-![Output 5](document_scanner_web\assets\screenshots\Output 5.png)
+![Output 5](assets/screenshots/Output%205.png)
 
-
-### 
-
+###
 
 **Happy Scanning! 📄✨**
 
