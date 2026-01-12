@@ -11,11 +11,11 @@ __pycache__/
 
 # Uploaded/Generated images
 static/uploads/*
-static/outputs/*
+# static/outputs/*
 
 # But include empty folders
 !static/uploads/.gitkeep
-!static/outputs/.gitkeep
+# !static/outputs/.gitkeep
 
 # OS files
 .DS_Store

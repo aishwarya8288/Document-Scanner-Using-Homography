@@ -14,27 +14,59 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     
+    <!-- Animated Background Particles -->
+    <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Gradient Orbs Background -->
+    <div class="gradient-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    
     <!-- ============================================ -->
     <!-- HEADER -->
     <!-- ============================================ -->
-    <header class="header">
+    <header class="header glass-header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <span class="logo-icon">📄</span>
-                    <span class="logo-text">DocScanner</span>
+                    <div class="logo-icon-wrapper">
+                        <span class="logo-icon">📄</span>
+                        <div class="logo-glow"></div>
+                    </div>
+                    <span class="logo-text">DocScanner<span class="logo-ai">AI</span></span>
                 </div>
                 <nav class="nav">
-                    <a href="#features" class="nav-link">Features</a>
-                    <a href="#how-it-works" class="nav-link">How it Works</a>
-                    <a href="https://github.com" target="_blank" class="nav-link">GitHub</a>
+                    <a href="#features" class="nav-link glass-button">
+                        <span>Features</span>
+                        <div class="ripple"></div>
+                    </a>
+                    <a href="#how-it-works" class="nav-link glass-button">
+                        <span>How it Works</span>
+                        <div class="ripple"></div>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="nav-link glass-button nav-cta">
+                        <span>GitHub</span>
+                        <div class="ripple"></div>
+                        <div class="button-glow"></div>
+                    </a>
                 </nav>
             </div>
         </div>
@@ -45,27 +77,89 @@
     <!-- ============================================ -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Transform Your Documents
-                    <span class="gradient-text">Instantly</span>
-                </h1>
-                <p class="hero-subtitle">
-                    AI-powered document scanner that automatically detects, crops, and enhances your documents.
-                    No more manual cropping or adjusting.
-                </p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Automatic</span>
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <div class="badge-glow"></div>
+                        <span class="badge-icon">✨</span>
+                        <span>Powered by Advanced AI</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">&lt;3s</span>
-                        <span class="stat-label">Processing</span>
+                    <h1 class="hero-title">
+                        <span class="title-line">AI Powered</span>
+                        <span class="title-line gradient-text glow-text">Document Scanner</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transform any photo into a professional scanned document in seconds.
+                        Smart edge detection, perspective correction, and enhancement - all automatic.
+                    </p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary btn-glow" id="heroUploadBtn">
+                            <span class="btn-content">
+                                <span class="btn-icon">🚀</span>
+                                <span>Start Scanning</span>
+                            </span>
+                            <div class="btn-shine"></div>
+                            <div class="btn-glow-effect"></div>
+                        </button>
+                        <button class="btn btn-glass">
+                            <span class="btn-content">
+                                <span class="btn-icon">▶️</span>
+                                <span>Watch Demo</span>
+                            </span>
+                            <div class="btn-shine"></div>
+                        </button>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">HD</span>
-                        <span class="stat-label">Quality</span>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon">⚡</div>
+                            <div class="stat-content">
+                                <span class="stat-number counter" data-target="99">0</span>
+                                <span class="stat-percent">%</span>
+                                <span class="stat-label">Accuracy</span>
+                            </div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🎯</div>
+                            <div class="stat-content">
+                                <span class="stat-number counter" data-target="3">0</span>
+                                <span class="stat-unit">s</span>
+                                <span class="stat-label">Processing</span>
+                            </div>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🏆</div>
+                            <div class="stat-content">
+                                <span class="stat-number">HD</span>
+                                <span class="stat-label">Quality</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-frame">
+                            <div class="phone-notch"></div>
+                            <div class="phone-screen">
+                                <div class="scan-animation">
+                                    <div class="document-icon">📄</div>
+                                    <div class="scan-line"></div>
+                                    <div class="scan-corners">
+                                        <span class="corner corner-tl"></span>
+                                        <span class="corner corner-tr"></span>
+                                        <span class="corner corner-bl"></span>
+                                        <span class="corner corner-br"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="phone-glow"></div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="float-icon icon-1">✓</div>
+                            <div class="float-icon icon-2">📐</div>
+                            <div class="float-icon icon-3">✨</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -79,102 +173,176 @@
         <div class="container">
             
             <!-- Upload Area -->
-            <div class="upload-area" id="uploadArea">
+            <div class="upload-area glass-card" id="uploadArea">
+                <div class="card-glow"></div>
                 <div class="upload-content">
-                    <div class="upload-icon">📤</div>
+                    <div class="upload-icon-wrapper">
+                        <div class="icon-pulse"></div>
+                        <div class="upload-icon">📤</div>
+                    </div>
                     <h3 class="upload-title">Upload Your Document</h3>
-                    <p class="upload-subtitle">Drag & drop or click to browse</p>
-                    <p class="upload-formats">Supports: JPG, PNG, JPEG, GIF, BMP, TIFF, WEBP</p>
+                    <p class="upload-subtitle">Drag & drop or click to browse your files</p>
+                    <p class="upload-formats">
+                        <span class="format-badge">JPG</span>
+                        <span class="format-badge">PNG</span>
+                        <span class="format-badge">JPEG</span>
+                        <span class="format-badge">WEBP</span>
+                    </p>
                     <input type="file" id="fileInput" accept="image/*" hidden>
-                    <button class="btn btn-primary" id="browseBtn">
-                        Browse Files
+                    <button class="btn btn-primary btn-upload" id="browseBtn">
+                        <span class="btn-content">
+                            <span class="btn-icon">📁</span>
+                            <span>Browse Files</span>
+                        </span>
+                        <div class="btn-shine"></div>
+                        <div class="btn-glow-effect"></div>
                     </button>
                 </div>
             </div>
 
             <!-- Enhancement Options -->
-            <div class="enhancement-options" id="enhancementOptions" style="display: none;">
-                <h3 class="options-title">Enhancement Mode</h3>
+            <div class="enhancement-options glass-card" id="enhancementOptions" style="display: none;">
+                <div class="card-glow"></div>
+                <h3 class="options-title">
+                    <span class="title-icon">🎨</span>
+                    Choose Enhancement Mode
+                </h3>
                 <div class="options-grid">
-                    <label class="option-card">
+                    <label class="option-card glass-option">
                         <input type="radio" name="enhance" value="adaptive" checked>
                         <div class="option-content">
-                            <span class="option-icon">🎯</span>
+                            <div class="option-icon-wrapper">
+                                <span class="option-icon">🎯</span>
+                                <div class="icon-ring"></div>
+                            </div>
                             <span class="option-name">Adaptive</span>
-                            <span class="option-desc">Clean B&W scan (recommended)</span>
+                            <span class="option-desc">Clean B&W scan</span>
+                            <div class="option-check">✓</div>
                         </div>
+                        <div class="option-glow"></div>
                     </label>
-                    <label class="option-card">
+                    <label class="option-card glass-option">
                         <input type="radio" name="enhance" value="clahe">
                         <div class="option-content">
-                            <span class="option-icon">✨</span>
+                            <div class="option-icon-wrapper">
+                                <span class="option-icon">✨</span>
+                                <div class="icon-ring"></div>
+                            </div>
                             <span class="option-name">CLAHE</span>
                             <span class="option-desc">Enhanced contrast</span>
+                            <div class="option-check">✓</div>
                         </div>
+                        <div class="option-glow"></div>
                     </label>
-                    <label class="option-card">
+                    <label class="option-card glass-option">
                         <input type="radio" name="enhance" value="sharpen">
                         <div class="option-content">
-                            <span class="option-icon">🔍</span>
+                            <div class="option-icon-wrapper">
+                                <span class="option-icon">🔍</span>
+                                <div class="icon-ring"></div>
+                            </div>
                             <span class="option-name">Sharpen</span>
                             <span class="option-desc">Sharper details</span>
+                            <div class="option-check">✓</div>
                         </div>
+                        <div class="option-glow"></div>
                     </label>
-                    <label class="option-card">
+                    <label class="option-card glass-option">
                         <input type="radio" name="enhance" value="none">
                         <div class="option-content">
-                            <span class="option-icon">📷</span>
+                            <div class="option-icon-wrapper">
+                                <span class="option-icon">📷</span>
+                                <div class="icon-ring"></div>
+                            </div>
                             <span class="option-name">Original</span>
                             <span class="option-desc">No enhancement</span>
+                            <div class="option-check">✓</div>
                         </div>
+                        <div class="option-glow"></div>
                     </label>
                 </div>
-                <button class="btn btn-success btn-lg" id="scanBtn">
-                    <span class="btn-icon">🔍</span>
-                    Scan Document
+                <button class="btn btn-success btn-lg btn-scan" id="scanBtn">
+                    <span class="btn-content">
+                        <span class="btn-icon">🔍</span>
+                        <span>Scan Document Now</span>
+                    </span>
+                    <div class="btn-shine"></div>
+                    <div class="btn-glow-effect"></div>
                 </button>
             </div>
 
             <!-- Loading Spinner -->
-            <div class="loading" id="loading" style="display: none;">
-                <div class="spinner"></div>
+            <div class="loading glass-card" id="loading" style="display: none;">
+                <div class="card-glow"></div>
+                <div class="spinner-container">
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-ring"></div>
+                    <div class="spinner-icon">🔍</div>
+                </div>
                 <p class="loading-text">Processing your document...</p>
-                <p class="loading-subtext">This may take a few seconds</p>
+                <p class="loading-subtext">Applying AI magic ✨</p>
+                <div class="loading-progress">
+                    <div class="progress-bar"></div>
+                </div>
             </div>
 
             <!-- Results Area -->
-            <div class="results" id="results" style="display: none;">
+            <div class="results glass-card" id="results" style="display: none;">
+                <div class="card-glow"></div>
                 <div class="results-header">
-                    <h2 class="results-title">✨ Scan Complete!</h2>
+                    <h2 class="results-title">
+                        <span class="success-icon">✨</span>
+                        Scan Complete!
+                    </h2>
                     <div class="results-info" id="resultsInfo"></div>
                 </div>
 
                 <div class="images-comparison">
-                    <div class="image-container">
-                        <div class="image-label">Original</div>
+                    <div class="image-container glass-image">
+                        <div class="image-glow"></div>
+                        <div class="image-label">
+                            <span class="label-icon">📷</span>
+                            Original
+                        </div>
                         <img id="originalImage" alt="Original document">
                     </div>
-                    <div class="comparison-arrow">→</div>
-                    <div class="image-container">
-                        <div class="image-label">Scanned</div>
+                    <div class="comparison-arrow">
+                        <div class="arrow-icon">→</div>
+                        <div class="arrow-glow"></div>
+                    </div>
+                    <div class="image-container glass-image">
+                        <div class="image-glow"></div>
+                        <div class="image-label">
+                            <span class="label-icon">✓</span>
+                            Scanned
+                        </div>
                         <img id="scannedImage" alt="Scanned document">
                     </div>
                 </div>
 
                 <div class="results-actions">
-                    <button class="btn btn-success" id="downloadBtn">
-                        <span class="btn-icon">⬇️</span>
-                        Download Scan
+                    <button class="btn btn-success btn-download" id="downloadBtn">
+                        <span class="btn-content">
+                            <span class="btn-icon">⬇️</span>
+                            <span>Download Scan</span>
+                        </span>
+                        <div class="btn-shine"></div>
+                        <div class="btn-glow-effect"></div>
                     </button>
-                    <button class="btn btn-secondary" id="newScanBtn">
-                        <span class="btn-icon">🔄</span>
-                        Scan Another
+                    <button class="btn btn-glass" id="newScanBtn">
+                        <span class="btn-content">
+                            <span class="btn-icon">🔄</span>
+                            <span>Scan Another</span>
+                        </span>
+                        <div class="btn-shine"></div>
                     </button>
                 </div>
             </div>
 
             <!-- Error Message -->
-            <div class="error-message" id="errorMessage" style="display: none;">
+            <div class="error-message glass-card" id="errorMessage" style="display: none;">
+                <div class="card-glow error-glow"></div>
                 <div class="error-content">
                     <span class="error-icon">⚠️</span>
                     <div class="error-text">
@@ -183,8 +351,12 @@
                         <ul class="error-tips" id="errorTips" style="display: none;"></ul>
                     </div>
                 </div>
-                <button class="btn btn-secondary" id="retryBtn">
-                    Try Again
+                <button class="btn btn-glass" id="retryBtn">
+                    <span class="btn-content">
+                        <span class="btn-icon">↻</span>
+                        <span>Try Again</span>
+                    </span>
+                    <div class="btn-shine"></div>
                 </button>
             </div>
 
@@ -196,48 +368,79 @@
     <!-- ============================================ -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Powerful Features</h2>
+            <div class="section-header">
+                <div class="section-badge">
+                    <span class="badge-icon">⚡</span>
+                    <span>Powerful Features</span>
+                </div>
+                <h2 class="section-title">Everything You Need</h2>
+                <p class="section-subtitle">Advanced AI-powered features for professional document scanning</p>
+            </div>
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
+                <div class="feature-card glass-card feature-hover">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">🤖</div>
+                        <div class="icon-orbit"></div>
+                    </div>
                     <h3 class="feature-title">Auto-Detection</h3>
                     <p class="feature-description">
-                        Automatically detects document boundaries using advanced computer vision algorithms.
+                        Automatically detects document boundaries using advanced computer vision algorithms
                     </p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📐</div>
+                <div class="feature-card glass-card feature-hover">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">📐</div>
+                        <div class="icon-orbit"></div>
+                    </div>
                     <h3 class="feature-title">Perspective Correction</h3>
                     <p class="feature-description">
-                        Corrects skewed angles and provides a perfect top-down view using homography.
+                        Corrects skewed angles and provides a perfect top-down view using homography
                     </p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">✨</div>
+                <div class="feature-card glass-card feature-hover">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">✨</div>
+                        <div class="icon-orbit"></div>
+                    </div>
                     <h3 class="feature-title">Smart Enhancement</h3>
                     <p class="feature-description">
-                        Multiple enhancement modes including adaptive thresholding and CLAHE for optimal readability.
+                        Multiple enhancement modes including adaptive thresholding and CLAHE for optimal readability
                     </p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
+                <div class="feature-card glass-card feature-hover">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">⚡</div>
+                        <div class="icon-orbit"></div>
+                    </div>
                     <h3 class="feature-title">Lightning Fast</h3>
                     <p class="feature-description">
-                        Processes documents in seconds with optimized OpenCV pipelines.
+                        Processes documents in seconds with optimized OpenCV pipelines
                     </p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
+                <div class="feature-card glass-card feature-hover">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">🔒</div>
+                        <div class="icon-orbit"></div>
+                    </div>
                     <h3 class="feature-title">Privacy First</h3>
                     <p class="feature-description">
-                        All processing happens locally on the server. Files are automatically cleaned up.
+                        All processing happens locally on the server. Files are automatically cleaned up
                     </p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
+                <div class="feature-card glass-card feature-hover">
+                    <div class="card-glow"></div>
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">📱</div>
+                        <div class="icon-orbit"></div>
+                    </div>
                     <h3 class="feature-title">Mobile Friendly</h3>
                     <p class="feature-description">
-                        Fully responsive design that works perfectly on phones, tablets, and desktops.
+                        Fully responsive design that works perfectly on phones, tablets, and desktops
                     </p>
                 </div>
             </div>
@@ -249,41 +452,67 @@
     <!-- ============================================ -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
+            <div class="section-header">
+                <div class="section-badge">
+                    <span class="badge-icon">🔄</span>
+                    <span>Simple Process</span>
+                </div>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Four simple steps to perfect scans</p>
+            </div>
             <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
+                <div class="step glass-card step-hover">
+                    <div class="card-glow"></div>
+                    <div class="step-number-wrapper">
+                        <div class="step-number">1</div>
+                        <div class="number-glow"></div>
+                    </div>
                     <div class="step-content">
                         <h3 class="step-title">Upload Image</h3>
                         <p class="step-description">
-                            Upload a photo of your document. Can be taken from any angle.
+                            Upload a photo of your document. Can be taken from any angle
                         </p>
                     </div>
+                    <div class="step-connector"></div>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
+                <div class="step glass-card step-hover">
+                    <div class="card-glow"></div>
+                    <div class="step-number-wrapper">
+                        <div class="step-number">2</div>
+                        <div class="number-glow"></div>
+                    </div>
                     <div class="step-content">
                         <h3 class="step-title">AI Detection</h3>
                         <p class="step-description">
-                            Our AI detects document edges using contour detection and edge analysis.
+                            Our AI detects document edges using contour detection and edge analysis
                         </p>
                     </div>
+                    <div class="step-connector"></div>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
+                <div class="step glass-card step-hover">
+                    <div class="card-glow"></div>
+                    <div class="step-number-wrapper">
+                        <div class="step-number">3</div>
+                        <div class="number-glow"></div>
+                    </div>
                     <div class="step-content">
                         <h3 class="step-title">Transform</h3>
                         <p class="step-description">
-                            Perspective transformation creates a perfect bird's-eye view.
+                            Perspective transformation creates a perfect bird's-eye view
                         </p>
                     </div>
+                    <div class="step-connector"></div>
                 </div>
-                <div class="step">
-                    <div class="step-number">4</div>
+                <div class="step glass-card step-hover">
+                    <div class="card-glow"></div>
+                    <div class="step-number-wrapper">
+                        <div class="step-number">4</div>
+                        <div class="number-glow"></div>
+                    </div>
                     <div class="step-content">
                         <h3 class="step-title">Enhance</h3>
                         <p class="step-description">
-                            Image enhancement ensures clean, readable results.
+                            Image enhancement ensures clean, readable results
                         </p>
                     </div>
                 </div>
@@ -294,13 +523,16 @@
     <!-- ============================================ -->
     <!-- FOOTER -->
     <!-- ============================================ -->
-    <footer class="footer">
+    <footer class="footer glass-footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3 class="footer-title">DocScanner</h3>
+                    <div class="footer-logo">
+                        <span class="logo-icon">📄</span>
+                        <span class="logo-text">DocScanner<span class="logo-ai">AI</span></span>
+                    </div>
                     <p class="footer-text">
-                        AI-powered document scanning using OpenCV and computer vision.
+                        AI-powered document scanning using OpenCV and advanced computer vision
                     </p>
                 </div>
                 <div class="footer-section">
@@ -323,7 +555,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 DocScanner. Built with ❤️ by Computer Vision Engineers.</p>
+                <p>&copy; 2026 DocScanner AI. Built with ❤️ by Computer Vision Engineers.</p>
             </div>
         </div>
     </footer>
